@@ -16,9 +16,10 @@ function App() {
     console.log(`new item added: ${newItem}`);
   };
 
-  const onDeleteButton = (itemName, dueDate) => {
-    console.log(`${itemName}`)
-  }
+  const onDeleteButton = (itemName) => {
+    const newTodoItem = todoItems.filter((item) => item.name !== itemName);
+    setTodoItems(newTodoItem)
+  };
 
   return <>
   <Component>

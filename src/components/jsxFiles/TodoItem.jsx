@@ -7,7 +7,7 @@ function TodoItem({todoName, todoDate, onDeleteButton}) {
         <div class="col-4">{todoName}</div>
         <div class="col-4">{todoDate}</div>
         <div class="col-2">
-          <button type="button" class="btn btn-danger" onClick={onDeleteButton({todoName}, {todoDate})}>
+          <button type="button" class="btn btn-danger" onClick={() => onDeleteButton(todoName)}>
             delete
           </button>
         </div>

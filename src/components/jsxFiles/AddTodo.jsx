@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import styles from '../cssFiles/AddTodoInputs.module.css'
 function AddTodo({handleNewItem}) {
   const [todoName, setTodoName] = useState("");
   const [dueDate, setDueDate] = useState()
@@ -19,9 +19,9 @@ function AddTodo({handleNewItem}) {
   }
 
   return <div class="row">
-                  <div class="col-4"><input type="text" value={todoName} placeholder="Enter Todo here" onChange={handleNameChange}/></div>
-                  <div class="col-4"><input type="date" value={dueDate} onChange={handleDateChange}/></div>
-                  <div class="col-2"><button type="button" class="btn btn-success" onClick={handleOnButtonClicked}>Add</button></div>
+                  <div class="col-4"><input type="text" value={todoName} placeholder="Enter Todo here" className={`${styles['cool-input-box']}`} onChange={handleNameChange}/></div>
+                  <div class="col-4"><input type="date" value={dueDate} className={`${styles['cool-input-box']}`} onChange={handleDateChange}/></div>
+                  <div class="col-2"><button type="button" class={`btn btn-success ${styles['custom-button']}`} onClick={handleOnButtonClicked}>Add</button></div>
           </div>
 }
 

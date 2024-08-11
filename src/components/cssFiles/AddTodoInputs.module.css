@@ -1,0 +1,24 @@
+.cool-input-box {
+  width: 200px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.cool-input-box:focus {
+  border-color: #2980b9;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+  outline: none;
+}
+
+.custom-button {
+  margin-top: 8px;
+  width: 150px;
+  height: 50px;
+}

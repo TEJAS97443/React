@@ -5,10 +5,7 @@ import Component from "./components/jsxFiles/Component"
 import TodoItemContainer from "./components/jsxFiles/TodoItemContainer"
 
 function App() {
-  const InitialTodoItems = [
-  ]
-  
-  const [todoItems, setTodoItems] = useState(InitialTodoItems)
+  const [todoItems, setTodoItems] = useState([])
 
   const onNewItemAddButton = (itemName, itemDueDate) => {
     const newItem = [...todoItems, {name: itemName, dueDate: itemDueDate}]

@@ -8,7 +8,7 @@ function TodoItemContainer() {
   return <>
    {
     todoItems.map((item) => (
-      <TodoItem todoDate={item.dueDate} todoName={item.name}></TodoItem>
+      <TodoItem todoDate={item.dueDate} todoName={item.name} todoPriority={item.priority}></TodoItem>
     ))
    }
   </>

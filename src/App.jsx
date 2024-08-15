@@ -9,16 +9,19 @@ function App() {
   const [todoItems, setTodoItems] = useState([])
   const refName = useRef(null);
   const refDate = useRef(null);
+  const refPriority = useRef(null);
 
   const addNewItem = () => {
-    const newItem = [...todoItems, {name: refName.current.value, dueDate: refDate.current.value}]
+    const newItem = [...todoItems, {name: refName.current.value, dueDate: refDate.current.value, priority: refPriority.current.value}]
     setTodoItems(newItem)
     const postData = {
       name: refName.current.value,
-      dueDate: refDate.current.value
+      dueDate: refDate.current.value,
+      priority: refPriority.current.value
     }
     refName.current.value = "";
     refDate.current.value = "";
+    refPriority.current.value = "";
 
     fetch('http://localhost:3000/api/items', {
       method: 'POST',
@@ -74,7 +77,7 @@ function App() {
   }}>
   <Component>
           <AppName />
-          <AddTodo refName={refName} refDate={refDate}/>
+          <AddTodo refName={refName} refDate={refDate} refPriority={refPriority}/>
           <TodoItemContainer></TodoItemContainer>
   </Component>
   </TodoItemsContext.Provider>
